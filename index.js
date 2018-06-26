@@ -150,7 +150,7 @@ class Alogriphm {
   fibMemo(index, cache = []) {
     this.is(index, 'number');
     this.is(cache, 'array');
-    
+
     if(cache[index]) {
       return cache[index];
     }
@@ -164,6 +164,44 @@ class Alogriphm {
     }
     
     return cache[index];
+  }
+
+  ceaserCipher(string, number) {
+    this.is(string, 'string');
+    this.is(number, 'number');
+
+    const lowerCaseText = string.toLowerCase();
+    const textArr = lowerCaseText.split('');
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    number = number % alphabet.length;
+
+    const secret = [];
+    textArr.forEach((char, idx) => {
+
+      const index = alphabet.indexOf(char);
+      let newIndex = index + number;
+
+      if(index > -1) {
+        if(newIndex > alphabet.length - 1) {
+          newIndex = newIndex - alphabet.length;
+        }
+        if(newIndex < 0) {
+          newIndex = newIndex + alphabet.length;
+        }
+        if(text[idx] === text[idx].toUpperCase()) {
+          secret.push(alphabet[newIndex].toUpperCase());
+        }
+        else {
+          secret.push(alphabet[newIndex]);
+        }
+        
+      }
+      else {
+        secret.push(char);
+      }
+    });
+
+    return secret.join('');
   }
 }
 
