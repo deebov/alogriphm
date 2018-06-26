@@ -123,6 +123,19 @@ class Alogriphm {
     return result;
   }
 
+  factorial(number, endNumber = 1, numerator = 1) {
+    this.is(number, 'number');
+    this.is(endNumber, 'number');
+    this.is(numerator, 'number');
+
+    if(number <= endNumber) {
+      return endNumber;
+    } 
+    else {
+      return number * factorial(number - numerator, endNumber, numerator);
+    }
+  }
+
 }
 
 
