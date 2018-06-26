@@ -10,6 +10,29 @@ class Alogriphm {
       throw new Error(errorMessage);
     }
   }
+
+  reverseWords(string) {
+    this.is(string, 'string', 'The argument must be string');
+
+    const stringArr = string.split(' ');
+
+    const reversedWords = [];
+
+    stringArr.forEach(word => {
+
+      const wordArr = word.split('');
+      let reversedWord = [];
+
+      wordArr.forEach(char => {
+        reversedWord.unshift(char);
+      });
+
+      reversedWords.push(reversedWord.join(''));
+    });
+
+    return reversedWords.join(' ');
+  }
+  
 }
 
 
