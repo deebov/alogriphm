@@ -97,6 +97,32 @@ class Alogriphm {
     return noteIsPossible;
   }
 
+  sieveOfEratosthenes(position) {
+    this.is(position, 'number');
+
+    for (let i = 0; i <= position; i++) {
+      primes[i] = true;    
+    }
+  
+    primes[0] = false;
+    primes[1] = false;
+  
+    for(let i = 2; i <= Math.sqrt(position); i++) {
+      for(let j = 2; j * i <= position; j++) {
+        primes[j * i] = false;
+      }
+    }
+  
+    const result = [];
+    for(let i = 0; i < primes.length; i++) {
+      if(primes[i]) {
+        result.push(i);
+      }
+    }
+  
+    return result;
+  }
+
 }
 
 
