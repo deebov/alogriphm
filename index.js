@@ -61,6 +61,15 @@ class Alogriphm {
     }
   }
 
+  isPalindrome(string) {
+    this.is(string, 'string');
+
+    const notReversed = string.toLowerCase().replace(/[^\w]/g, '');
+    const reversed = string.split('').reverse().join('');
+
+    return notReversed === reversed;
+  }
+
 }
 
 
