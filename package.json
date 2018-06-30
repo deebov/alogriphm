@@ -1,0 +1,25 @@
+{
+  "name": "alogriphm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deebov/alogriphm.git"
+  },
+  "keywords": [
+    "algorithm",
+    "alogriphm",
+    "javascript",
+    "deebov"
+  ],
+  "author": "Dilshod Turobov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deebov/alogriphm/issues"
+  },
+  "homepage": "https://github.com/deebov/alogriphm#readme"
+}
